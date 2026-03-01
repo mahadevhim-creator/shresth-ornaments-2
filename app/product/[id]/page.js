@@ -4,7 +4,11 @@ import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { products } from '../../data/products'
+import { products } from '../../data/products'
 
+export function generateStaticParams() {
+  return products.map((p) => ({ id: String(p.id) }))
+}
 export default function ProductPage({ params }) {
   const { id } = use(params)
   const product = products.find(p => p.id === parseInt(id))
