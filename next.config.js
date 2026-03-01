@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  generateBuildId: async () => 'build',
+  basePath: '/shresth-ornaments-2',
+  assetPrefix: '/shresth-ornaments-2',
 }
 
 module.exports = nextConfig
